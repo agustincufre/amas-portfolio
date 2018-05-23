@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- Abrimos el html-->
+<html lang="es">
+    <head> <!-- Este es el cabezal del documento -->
+        <title>Portfolio A+</title>
+        <meta charset="utf-8"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header class="contenedor header"><!-- etiqueta semantica -->
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg"/>
+            </a>
+            <nav class="menu"><!-- etiqueta de navegacion -->
+                <ul><!-- etiqueta que levanta la lista que precisa un contenedor -->
+                    <li>
+                        <a href="index.html"><i class="fas fa-home"></i> About</a>
+                    </li>
+                    <li>
+                            <a href="work.html">Work</a>
+                    </li>
+                    <li>
+                            <a href="labs.html">Labs</a>
+                    </li>   
+                    <li class="active">
+                            <a href="contact.html">Contact</a>
+                    </li> 
+                </ul>
+            </nav>
+            <ul class="redes-sociales">
+                <li>
+                    <a href="http://facebook.com"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                        <a href="http://twitter.com"><i class="fab fa-twitter-square"></i></a>
+                </li>
+                <li>
+                        <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                        <a href="http://github.com"><i class="fab fa-github"></i></a>
+                </li> 
+            </ul>
+        </header> 
+        <main class="contenedor main">
+            <section>
+                <form class="formulario" id="formulario"  action="https://mailthis.to/agustin" method="POST">
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre..."/>
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Ingrese su correo..." required/>  
+                    </div>
+                    <div>
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" name="edad" placeholder="Ingrese su edad..." required/>
+                    </div>   
+                    <div>
+                        Sexo
+                        <br />
+                        <div>
+                            <input type="radio" value="Hombre" id="hombre" name="sexo"/>
+                            <label for="hombre">Hombre </label>
+                        </div>
+                        <div>
+                            <input type="radio" value="Mujer" id="mujer" name="sexo"/>
+                            <label for="mujer">Mujer</label>
+                        </div>
+                    </div>
+                    <div>
+                            Intereses
+                            <br />
+                            <div>
+                                <input type="checkbox" value="diseno" id="diseno" name="intereses"/>
+                                <label for="diseno">Diseño</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" value="programacion" id="programacion" name="intereses"/>
+                                <label for="programacion">Programación</label>
+                            </div>
+                    </div>
+                    <div>
+                        <label for="fechanacimiento">Fecha de nacimiento</label>
+                        <input type="date" value="fechanacimiento" id="fechanacimiento" name="fechanacimiento"/>
+                    </div>
+                    <div>
+                        Departamento que vive
+                        <Select id="departamentovive" name="departamentovive">
+                            <option value"0" disabled selected>Seleccione una opcion..</option>
+                            <option value"montevideo">Montevideo</option>
+                            <option value"rio_negro">Rio Negro</option>
+                            <option value"paysandu">Paysandú</option>
+                        </Select>
+                        Departamento que vivió
+                        <Select id="departamentovivio" name="departamentovivio" multiple>
+                                <option value"montevideo">Montevideo</option>
+                                <option value"rio_negro">Rio Negro</option>
+                                <option value"paysandu">Paysandú</option>
+                        </Select>
+                    </div>  
+                    <div>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea type="textarea" id="mensaje" name="mensaje"></textarea> 
+                    </div>
+                    <div>
+                        <input type="submit" value="Completar"/>
+                    </div>
+                </form>
+            </section>
+        </main>   
+    </body>
+</html>
